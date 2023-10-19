@@ -45,6 +45,14 @@ class ViewController: UIViewController {
         
         let arrayTaskFive = array.sorted{ $0.count < $1.count}
         print(arrayTaskFive)
+        
+        //zadanie6
+        var arrayWithoutSpaces: Array? = []
+        for var element in array{
+            element.replace(" ", with: "")
+            arrayWithoutSpaces?.append(element)
+        }
+        print(arrayWithoutSpaces ?? "Error")
     }
 
 
