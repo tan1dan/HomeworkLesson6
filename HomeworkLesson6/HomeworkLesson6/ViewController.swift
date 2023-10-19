@@ -28,12 +28,12 @@ class ViewController: UIViewController {
         
         // zadanie2
         
-        let removeArrayLessThanFive = array.filter({ $0.compactMap{element in element} .count >= 5})
+        let removeArrayLessThanFive = array.filter({ $0.count >= 5})
         print(removeArrayLessThanFive)
         
         //zadanie3
         
-        let countOfArrayMoreThanTen = array.filter( {$0.compactMap{element in element}.count > 10}).count
+        let countOfArrayMoreThanTen = array.filter( {$0.count > 10}).count
         print(countOfArrayMoreThanTen)
         
         //zadanie4
@@ -52,7 +52,13 @@ class ViewController: UIViewController {
             element.replace(" ", with: "")
             arrayWithoutSpaces?.append(element)
         }
+        var arrayWithoutSpacesTwo = array.map{ (element: String) -> String in
+            var element = element
+            element.replace(" ", with: "")
+            return element
+        }
         print(arrayWithoutSpaces ?? "Error")
+        print(arrayWithoutSpacesTwo)
     }
 
 
