@@ -28,8 +28,13 @@ class ViewController: UIViewController {
         
         // zadanie2
         
-        let removeArrayLessThanFive = array.filter({ $0.flatMap{element in element}.count >= 5})
+        let removeArrayLessThanFive = array.filter({ $0.compactMap{element in element} .count >= 5})
         print(removeArrayLessThanFive)
+        
+        //zadanie3
+        
+        let countOfArrayMoreThanTen = array.filter( {$0.compactMap{element in element}.count > 10}).count
+        print(countOfArrayMoreThanTen)
         
     }
 
