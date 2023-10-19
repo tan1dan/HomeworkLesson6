@@ -38,9 +38,13 @@ class ViewController: UIViewController {
         
         //zadanie4
         
-        let newArray = array.sorted{ $0.count > $1.count}
-        print(newArray.first ?? "Error")
+        let arrayTaskFour = array.sorted{ $0.count > $1.count}
+        print(arrayTaskFour.first ?? "Error")
         
+        //zadanie5
+        
+        let arrayTaskFive = array.sorted{ $0.count < $1.count}
+        print(arrayTaskFive)
     }
 
 
