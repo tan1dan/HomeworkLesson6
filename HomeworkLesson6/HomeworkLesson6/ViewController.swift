@@ -36,6 +36,11 @@ class ViewController: UIViewController {
         let countOfArrayMoreThanTen = array.filter( {$0.compactMap{element in element}.count > 10}).count
         print(countOfArrayMoreThanTen)
         
+        //zadanie4
+        
+        let newArray = array.sorted{ $0.count > $1.count}
+        print(newArray.first ?? "Error")
+        
     }
 
 
