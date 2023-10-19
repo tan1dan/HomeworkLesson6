@@ -25,6 +25,12 @@ class ViewController: UIViewController {
             }
         }
         print(count)
+        
+        // zadanie2
+        
+        let removeArrayLessThanFive = array.filter({ $0.flatMap{element in element}.count >= 5})
+        print(removeArrayLessThanFive)
+        
     }
 
 
